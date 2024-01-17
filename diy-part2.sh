@@ -11,7 +11,9 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-parentcontrol  package/luci-app-parentcontrol;
+git clone  https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
+git clone  https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
+git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+git clone https://github.com/DevOpenWRT-Router/luci-app-cpulimit package/luci-app-cpulimit
 sed -i 's/192.168.1.1/10.18.18.1/g' package/base-files/files/bin/config_generate
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='Adore'' package/lean/default-settings/files/zzz-default-settings
